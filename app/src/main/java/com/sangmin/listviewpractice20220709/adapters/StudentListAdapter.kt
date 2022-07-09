@@ -35,6 +35,8 @@ class StudentListAdapter(
         ageTxt.text = mList[position].birthYear.toString()
         addressTxt.text = mList[position].address
 
+
+
         return row
     }
 
