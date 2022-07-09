@@ -10,7 +10,8 @@ class MainActivity : AppCompatActivity() {
     // ArrayList 목록 공간을 만들어주고
     val mStudentList = ArrayList<StudentData>()
 
-//    어댑터 클래스 맴버변수화
+//    어댑터 클래스 맴버 변수화
+//    lateinit : 나중에 초기화 해준다
     lateinit var mStudentListAdapter : StudentListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
