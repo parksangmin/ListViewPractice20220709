@@ -9,6 +9,14 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        val name = intent.getStringExtra("name")
+        val birthYear = intent.getIntExtra("birthYear", 0)
+        val address = intent.getStringExtra("address")
+
+        nameTxt.text = name
+        ageTxt.text = birthYear.toString()
+        addressTxt.text = address
+
 
 
     }
