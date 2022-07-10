@@ -46,9 +46,7 @@ class MainActivity : AppCompatActivity() {
 //       리스트뷰 한줄에 대한 클릭 이벤트 처리
         mainListView.setOnItemClickListener { adapterView, view, position, l ->
            val myIntent = Intent(this, ProfileActivity::class.java)
-            myIntent.putExtra("name",mStudentList[position].name)
-                .putExtra("birthYear",mStudentList[position].birthYear)
-                .putExtra("address",mStudentList[position].address)
+            myIntent.putExtra("studentData",mStudentList[position])
             startActivity(myIntent)
         }
 //        리스트뷰 한줄에 대한 롱클릭 이벤트 처리

@@ -9,13 +9,15 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val name = intent.getStringExtra("name")
-        val birthYear = intent.getIntExtra("birthYear", 0)
-        val address = intent.getStringExtra("address")
+//        val name = intent.getStringExtra("name")
+//        val birthYear = intent.getIntExtra("birthYear", 0)
+//        val address = intent.getStringExtra("address")
 
-        nameTxt.text = name
-        ageTxt.text = birthYear.toString()
-        addressTxt.text = address
+        val studentData = intent.getSerializableExtra("studentData") as StudentData
+
+           nameTxt.text = studentData.name
+           ageTxt.text ="${studentData.getKoreanAge()}세"
+           addressTxt.text = studentData.address
 
 
 
