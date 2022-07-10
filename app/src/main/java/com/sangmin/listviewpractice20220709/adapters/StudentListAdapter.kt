@@ -34,7 +34,10 @@ class StudentListAdapter(
         nameTxt.text = mList[position].name
 //        도전과제 ==> String을 가공(${}활용) => 나이부분의 값이 (~~세) 로 표시되도록 가공
 //        힌트: 1. 안쪽에서 Text를 던지는 것
-        ageTxt.text = mList[position].birthYear.toString()
+//        val koreanAge = 20022 - mList[position].birthYear + 1
+//        ageTxt.text = "(${koreanAge}세)"
+
+        ageTxt.text = "(${mList[position].getKoreanAge()}세)"
         addressTxt.text = mList[position].address
 
 
